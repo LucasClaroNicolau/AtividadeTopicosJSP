@@ -1,0 +1,27 @@
+<head>
+<meta charset="UTF-8">
+</head>
+<form name="formulario" ng-controller="form">
+
+	<md-input-container flex="80">
+    	<label>Altura</label>
+        <input required name="altura" ng-model="form.altura">
+        <div ng-messages="formulario.altura.$error">
+        	<div ng-message="required">Altura é Obrigatório(a).</div>
+        </div>
+    </md-input-container>
+    
+    <br />
+    
+    <md-input-container flex="80">
+    	<label>Peso</label>
+        <input required name="peso" ng-model="form.peso">
+        <div ng-messages="formulario.peso.$error">
+        	<div ng-message="required">Peso é Obrigatório(a).</div>
+        </div>
+    </md-input-container>
+    
+    <br/>
+    <md-button type="submit" name="Enviar" ng-click="enviar()" class="md-raised md-primary">CALCULAR</md-button>
+    
+</form>
